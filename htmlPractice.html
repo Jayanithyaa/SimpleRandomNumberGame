@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>randomNumberGame</title>
+        <style>
+            body{
+                background-color: #ecfafa;
+            }
+            .gameBody{
+                color: rgb(173, 239, 239);
+                background-color: #226b6b;
+                margin: 15%;
+                padding: 100px;
+                text-align: center;
+            }
+            input[type=text] {
+                width: 30%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 3px solid #7ea5a5;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+                font-size: large;
+                color: #226b6b;
+                text-align: center;
+            }
+
+            input[type=text]:focus {
+                border: 3px solid #103f3f;
+            }
+
+            .button {
+                background-color: #041b1b; /* Green */
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="gameBody">
+            <h1>What number is I am thinking now?</h1>
+            <h2>***number between 1-10</h2>
+            <input type ="text" id="guess">
+            <br>
+            <button class="button" id="guessCheck">Guess</button>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("guessCheck").onclick=function(){
+                var randomNumber= Math.floor(Math.random() * 11) ;
+
+            if (document.getElementById("guess").value == randomNumber){
+                alert("Well done!!");
+            }
+            else{
+                alert("Not you faild. I'm thinking about number "+ randomNumber);
+            }
+            }
+
+        </script>
+    </body>
+</html>
